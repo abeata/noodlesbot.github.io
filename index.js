@@ -1,8 +1,7 @@
-const Discord = require("discord.js")
-const Client = new Discord.Client()
+const {Client,Intents} = require("discord.js")
+const client = new Client({ intents: [Intents.FLAGS.GUILDS]})
 
-Client.on("ready", () => {
-    console.log("hci")
+client.once("ready", () => {
+    console.log("ready")
 })
-
 Client.login(process.env.TOKEN)
