@@ -5,4 +5,4 @@ Client.on("ready", () => {
     console.log("hci")
 })
 
-Client.login(secrets.TOKEN)
+Client.login(process.env.TOKEN)
