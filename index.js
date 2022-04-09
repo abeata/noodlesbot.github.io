@@ -4,4 +4,4 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS]})
 client.once("ready", () => {
     console.log("ready")
 })
-client.login(secrets.TOKEN)
+client.login(process.env.TOKEN)
