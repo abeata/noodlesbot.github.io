@@ -12,7 +12,7 @@ client.on("messageCreate", message => {
     var prefix = "!";
     var messageArray = message.content.split(" ");
     var command = messageArray[0];
-    if(command = prefix + "test") return message.channel.send("testing command is working.");
+    if(command == prefix + "test") return message.channel.send("testing command is working.");
 })
 
 client.login(process.env.TOKEN);
