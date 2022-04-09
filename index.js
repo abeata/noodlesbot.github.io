@@ -4,7 +4,7 @@ const fs = require("fs");
 
 client.commands = new Collection();
 
-const commandFiles = fs.readFileSync("./commands").filter(file => file.endsWith(".js"));
+const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
 
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
